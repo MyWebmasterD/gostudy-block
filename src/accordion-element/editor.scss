@@ -1,0 +1,28 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-cgb-block-gostudy-block  {
+  background: $green;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+}
+
+.gostudy-accordion-element-header{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.gostudy-accordion-element-header textarea {
+  width: calc(100% - 40px) !important;
+}
+.gostudy-accordion-element-header .advgb-accordion-header-icon{
+  margin-right: 0;
+}
+

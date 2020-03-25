@@ -1,0 +1,294 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-cgb-block-gostudy-block  {
+  background: $green;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+}
+
+.editor-block-list__layout .container{
+  position: relative;
+}
+
+.editor-block-list__layout .container:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: -30px;
+  width: 2px;
+  background: #91AFE2 ;
+  //padding-left: 10px;
+}
+
+.editor-block-list__layout .container .container:before {
+  left: -20px;
+  background: #84DCC6 ;
+}
+
+.editor-block-list__layout .container .container .container:before {
+  left: -10px;
+  background: #9EE493;
+}
+
+.text-light-gray{
+  color: lightgray;
+  .container.has-bg-image &, .container.has-overlay &{
+    color: white;
+    opacity: 0.9;
+    z-index: 1;
+  }
+}
+
+
+.container , .gostudy-related-posts__dynamic{
+  > .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+  }
+  &.has-bg-image{
+    > .overlay {
+      opacity: 0.5;
+    }
+  }
+  /* z-index: 0; */
+}
+
+.container,.gostudy-related-posts__dynamic {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.container,.gostudy-related-posts__dynamic{ 
+  > * {
+    position: relative;
+  }
+}
+
+
+
+.container,.gostudy-related-posts__dynamic{
+  &.has-bg-image, &.has-overlay{
+    color: #fff ;
+    textarea, input {
+      color: #fff ;
+    }
+  }
+}
+.container,.gostudy-related-posts__dynamic{
+  &.content-orange{
+    h1.banner__title, h1.related-posts__title, .banner__btn,.related-posts__btn{
+      textarea, input {
+        color: #ff7f2f;
+      }
+    }
+    &.timeline-wrapper h4{
+      color: #ff7f2f;
+    }
+    .gostudy-timeline-element-icon{
+      background: #ff7f2f;
+      border-radius: 100%;
+      position: relative;
+      padding-bottom: 100%;
+    }
+  }
+  &.content-cyan{
+
+    h1.banner__title, h1.related-posts__title, .banner__btn,.related-posts__btn{
+      textarea, input {
+        color: #007380;
+      }
+    }
+    &.timeline-wrapper h4{
+      color: #007380;
+    }
+    .gostudy-timeline-element-icon{
+      background: #007380;
+      border-radius: 100%;
+      position: relative;
+      padding-bottom: 100%;
+    }
+  }
+}
+
+
+.gutenberg-innerblocks.carousel__inner > .editor-inner-blocks > .editor-block-list__layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  > div {
+    width: 33.3%;
+    flex-shrink: 0;
+    text-align: center !important;
+    margin: 0;
+    textarea {
+      text-align: center !important;
+    }
+  }
+}
+
+.gostudy-related-posts__dynamic.has-bg-image {
+  min-height: 250px;
+}
+
+.banner__btn, .related-posts__btn, .team_btn {
+  display: flex;
+}
+
+
+.image-and-text.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  flex-grow: 1;
+  justify-content: space-between;
+  > .text-light-gray {
+    width: 100%;
+  }
+  > .image-and-text__image{
+    width: 30%;
+    min-height: 100%;
+    display: flex;
+    margin-left: -22px;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  >.image-and-text__content{
+    width: 100%;
+  }
+  > .image-and-text__image + .image-and-text__content{
+    width: 70%;
+  }
+  &.image-right{
+    >.image-and-text__content{
+      order: 2;
+    }
+    > .image-and-text__image{
+      order: 3;
+      margin-left: auto;
+      margin-right: -22px;
+    }
+  }
+}
+
+.image-and-text-horizontal .section__bg__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image-and-text-horizontal.has-bg-image-2 .imagentext__image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+}
+
+.image-and-text-horizontal.has-bg-image-2.has-overlay .imagentext__image {
+  position: absolute;
+  height: 100%;
+}
+
+.image-and-text-horizontal.has-bg-image-2.has-overlay .section__bg__overlay {
+  opacity: 0.5;
+}
+
+.slider-element {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  .text-light-gray {
+    width: 100%;
+  }
+  .sliderelement__image {
+    width: 150px;
+    height: 150px;
+  }
+  .slider-element-content {
+    flex-grow: 1;
+    padding-left: 10px;
+    background: rgba(255,255,255,0.6);
+    color: black;
+  }
+}
+
+
+.gostudy-timeline-element-content.row {
+  display: flex;
+  .col-5 {
+    width: 41.6666%;
+  }
+  .col-2 {
+    width: 16.6666%;
+    padding: 20px;
+  }
+  &.align-right {
+    flex-direction: row-reverse;
+  }
+}
+
+.gostudy-timeline-element-icon svg {
+  width: 100%;
+  height: auto;
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.tip-block {
+  padding-bottom: 30px;
+  .tip-wrapper {
+    width: auto;
+    margin: 0 25% 0 10%;
+    .gostudy-tip-header-icon svg:empty {
+      display: none;
+    }
+    h4 {
+      display: flex;
+      padding: 15px;
+    }
+    .tip-content {
+      background: rgba(255,255,255,0.9);
+      color: black;
+      padding: 15px;
+    }
+  }
+}
+
+
+
+
+.whitecard-block {
+  padding-bottom: 1px;
+  .whitecard-wrapper {
+    width: auto;
+    margin: 10px 10% 0;
+    background: rgba(255,255,255,0.9);
+    color: black;
+    h6 textarea {
+      color: black !important;
+    }
+  }
+}
+
+

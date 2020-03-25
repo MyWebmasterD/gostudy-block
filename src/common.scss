@@ -1,0 +1,46 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+
+// Colors.
+$black: rgb(41, 41, 41);
+$white: #f4f4f4;
+$gray: #dedede;
+$green: #bada55;
+$red: orangered;
+
+
+.editor-block-list__block-edit .container textarea, .editor-block-list__block-edit .container input {
+    background: none;
+}
+
+.editor-block-list__block-edit .container, .gutenberg__inner__content {
+    position: relative;
+}
+
+.gutenberg__inner__content.has-bg-image {
+    color: $white;
+    .editor-default-block-appender__content{
+        color: $white !important;
+    }
+    textarea{    
+        background: transparent;
+        &:focus{
+            background: $white;
+        }
+    }
+}
+
+.gutenberg__bg__image, .gutenberg__bg__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.gutenberg__bg__overlay {
+    opacity: 0.4;
+}
