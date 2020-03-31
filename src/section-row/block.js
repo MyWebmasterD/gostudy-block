@@ -257,8 +257,7 @@ registerBlockType( 'cgb/gostudy-section-row', {
 	//save: function( { attributes } ) {
 		//console.log(attributes.bgColor);
 		return (
-			//<div className={classes}>
-      <div className='wp-block-cgb-gostudy-section section'>
+			<div className={classes + " wp-block-cgb-gostudy-section section"}>
 				{ bannerImage(attributes.imageUrl, attributes.imageAlt) }
 				{ attributes.bgColor && attributes.bgColor.length > 0 && attributes.bgColor != 'transparent' && <div className="section__bg__overlay" style={ { background : attributes.bgColor} } ></div> }
 				<div className="section__content" >

@@ -264,15 +264,14 @@ registerBlockType( 'cgb/gostudy-cta', {
 			return (
 			  <a
 				className="banner__btn btn btn-outline-light"
-				src={ src }
+				href={ src }
 				>{text}</a>
 
 			);
 
 		}
 		return (
-			//<div className={classes}>
-      <div className='wp-block-cgb-gostudy-banner banner'>
+			<div className={classes + " wp-block-cgb-gostudy-banner banner"}>
 				{ bannerImage(attributes.imageUrl, attributes.imageAlt) }
 				<div className="banner__bg__overlay" style={ { background : attributes.bannerBgColor} } ></div>
 				<div className="banner__content" >

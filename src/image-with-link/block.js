@@ -288,8 +288,7 @@ registerBlockType( 'cgb/gostudy-image-with-link', {
 		};
 
 		return (
-			//<div className={wrapperClasses}>
-      <div className='wp-block-cgb-gostudy-image-link'>
+			<div className={wrapperClasses + " wp-block-cgb-gostudy-image-link"}>
 				<a href={linkAttr(attributes.link)} >
 					{ bannerImage(attributes.imageUrl, attributes.imageAlt) }
 					{ attributes.bgColor && attributes.bgColor.length >0 && attributes.bgColor != 'transparent' && <div className="banner__bg__overlay" style={ { background : attributes.bgColor } } ></div>}
